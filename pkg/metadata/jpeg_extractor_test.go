@@ -1,4 +1,4 @@
-package main
+package metadata
 
 import (
 	"bytes"
@@ -91,7 +91,7 @@ SubSecTimeOriginal: "00"
 
 	// Capture the output of the extractJPEGMetadata function
 	output := captureOutput(func() {
-		extractJPEGMetadata(sampleFilePath)
+		ExtractJPEGMetadata(sampleFilePath)
 	})
 
 	// Parse the outputs into maps
