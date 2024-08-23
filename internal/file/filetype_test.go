@@ -1,6 +1,7 @@
 package file
 
 import (
+	_ "embed"
 	"testing"
 )
 
@@ -25,7 +26,7 @@ func TestGetFileType(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			if got := GetFileType(tt.args.filePath); got != tt.want {
-				t.Errorf("getFileType() = %v, want %v", got, tt.want)
+				t.Errorf("GetFileType() = %v, want %v", got, tt.want)
 			}
 		})
 	}
