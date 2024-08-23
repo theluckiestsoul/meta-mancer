@@ -1,11 +1,14 @@
 package file
 
-import "testing"
+import (
+	"testing"
+)
 
-func Test_getFileType(t *testing.T) {
+func TestGetFileType(t *testing.T) {
 	type args struct {
 		filePath string
 	}
+
 	tests := []struct {
 		name string
 		args args
