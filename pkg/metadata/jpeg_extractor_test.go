@@ -1,4 +1,4 @@
-package main
+package metadata
 
 import (
 	"bytes"
@@ -40,7 +40,7 @@ func parseExifOutput(output string) map[string]string {
 
 func TestExtractJPEGMetadata(t *testing.T) {
 	// Path to a sample JPEG file with known EXIF data
-	sampleFilePath := "IMG_4229.JPG"
+	sampleFilePath := "../../IMG_4229.JPG"
 
 	// Expected EXIF properties (replace with actual expected values)
 	expectedOutput := `XResolution: "72/1"
@@ -91,7 +91,7 @@ SubSecTimeOriginal: "00"
 
 	// Capture the output of the extractJPEGMetadata function
 	output := captureOutput(func() {
-		extractJPEGMetadata(sampleFilePath)
+		ExtractJPEGMetadata(sampleFilePath)
 	})
 
 	// Parse the outputs into maps
